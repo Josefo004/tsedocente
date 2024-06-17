@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    container_name: servicio-msql
+    restart: on-failure:5           # reinicio del Contenedor solo 5 veces
+    build: .
+    command: sh -c "npm run build && npm start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src

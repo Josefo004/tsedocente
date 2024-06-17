@@ -1,0 +1,36 @@
+
+GET http://localhost:3000/api/v0/pagosqr/VEN-0000010-3659537
+
+###
+GET http://localhost:3000/api/v0/personas/3659537
+
+###
+GET http://localhost:3000/api/v0/comision/
+
+###
+GET http://172.16.1.251/consultasapi/v0/comision/
+
+###
+POST http://172.16.1.251/consultasapi/v0/comision
+Content-Type: application/json
+
+{
+  "nuevoCosto": 0.50
+}
+
+###
+POST http://localhost:3000/api/v0/comisionrs
+Content-Type: application/json
+
+{
+  "nuevoCosto": 0.50
+}
+
+###
+GET http://172.16.1.251/consultasapi/v0/recepcion?codigoPago=VEN-0000019-3659537&nroDocumento=1111111113&fechaPago=2024-03-05
+
+###
+GET http://localhost:3000/api/v0/recepcion?codigoPago=VEN-00066-3659537&nroDocumento=1111111113&fechaPago=2024-03-14
+
+###
+http://172.16.1.251/consultasapi/v0/recepcion?codigoPago=VEN-00035-3659537&nroDocumento=11111111125&fechaPago=2024-03-12
