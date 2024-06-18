@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { obtenerOrden, obtenerDetallesOrden, actualizarProductoTalla } from '../helpers/ecommerce/c_ordenes';
 import { Tdeposito, tDetalleOrden } from '../interfaces/pre_res.interface';
-import Depositos from '../models/tablasPagos/depositos';
+// import Depositos from '../models/tablasPagos/depositos';
 
 export const getRecepcion = async (req: Request, res: Response) => {
   const { codigoPago, nroDocumento, fechaPago } = req.query;
