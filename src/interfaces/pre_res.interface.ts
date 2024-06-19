@@ -1,27 +1,27 @@
 
 export interface AdmisionPersona {
-  IdPersona:               string;
-  IdLugarEmision:          number;
-  Paterno:                 string;
-  Materno:                 string;
-  Nombres:                 string;
-  FechaNacimiento:         Date;
-  Sexo:                    string;
-  EstadoCivil:             string;
-  Direccion:               string;
-  Celular:                 string;
-  Telefono:                string;
-  Email:                   string;
-  IdLugarNacimiento:       number;
-  CodigoRueColegio:        string;
-  AnnioEgresoColegio:      string;
+  IdPersona: string;
+  IdLugarEmision: number;
+  Paterno: string;
+  Materno: string;
+  Nombres: string;
+  FechaNacimiento: Date;
+  Sexo: string;
+  EstadoCivil: string;
+  Direccion: string;
+  Celular: string;
+  Telefono: string;
+  Email: string;
+  IdLugarNacimiento: number;
+  CodigoRueColegio: string;
+  AnnioEgresoColegio: string;
   NombreCompletoApoderado: string;
-  CelularApoderado:        string;
-  DireccionApoderado:      string;
-  Password:                string;
-  Verificado:              boolean;
-  CodigoNacionalidad:      string;
-  FechaHoraRegistro:       Date;
+  CelularApoderado: string;
+  DireccionApoderado: string;
+  Password: string;
+  Verificado: boolean;
+  CodigoNacionalidad: string;
+  FechaHoraRegistro: Date;
 }
 
 export interface Admision {
@@ -30,19 +30,19 @@ export interface Admision {
 }
 
 export interface ComercioPersona {
-  CodigoUsuario:          string;
-  Login:                  string;
-  IdPersona:              string;
-  NombreCompleto:         string;
-  Email:                  string;
-  AuthKey:                string;
-  PasswordHash:           string;
-  PasswordResetToken:     null;
-  Estado:                 string;
-  EsAdmin:                null;
-  FechaHoraRegistro:      Date;
+  CodigoUsuario: string;
+  Login: string;
+  IdPersona: string;
+  NombreCompleto: string;
+  Email: string;
+  AuthKey: string;
+  PasswordHash: string;
+  PasswordResetToken: null;
+  Estado: string;
+  EsAdmin: null;
+  FechaHoraRegistro: Date;
   FechaHoraActualizacion: Date;
-  VerificationToken:      string;
+  VerificationToken: string;
 }
 
 export interface Comercio {
@@ -51,21 +51,21 @@ export interface Comercio {
 }
 
 export interface DdjjPersona {
-  id_persona:          string;
-  apellido_paterno:    string;
-  apellido_materno:    string;
-  nombres:             string;
-  lugar_emision:       string;
-  fecha_nacimiento:    Date;
+  id_persona: string;
+  apellido_paterno: string;
+  apellido_materno: string;
+  nombres: string;
+  lugar_emision: string;
+  fecha_nacimiento: Date;
   codigo_nacionalidad: string;
-  id_lugar:            number;
-  estado_civil:        string;
-  sexo:                string;
-  direccion:           string;
-  telefono:            number;
-  celular:             number;
-  email:               string;
-  discapacidad:        string;
+  id_lugar: number;
+  estado_civil: string;
+  sexo: string;
+  direccion: string;
+  telefono: number;
+  celular: number;
+  email: string;
+  discapacidad: string;
 }
 
 export interface Ddjj {
@@ -75,9 +75,9 @@ export interface Ddjj {
 
 
 export interface ComisionElement {
-  IdComision:        number;
+  IdComision: number;
   FechaHoraRegistro: Date;
-  CostoComision:     number;
+  CostoComision: number;
 }
 
 export interface Comision {
@@ -85,25 +85,25 @@ export interface Comision {
 }
 
 export interface tOrden {
-  IdOrden:                    number;
-  CodigoEstado:               string;
-  TotalOrden:                 number;
-  CodigoUsuarioCreacion:      string;
-  FechaCreacion:              Date;
+  IdOrden: number;
+  CodigoEstado: string;
+  TotalOrden: number;
+  CodigoUsuarioCreacion: string;
+  FechaCreacion: Date;
   CodigoUsuarioActualizacion: null;
-  FechaActualizacion:         null;
-  Observacion:                null;
-  Email:                      string;
-  Celular:                    string;
-  NombreCompleto:             string;
-  CostoComision:              number;
-  CodigoPago:                 string;
+  FechaActualizacion: null;
+  Observacion: null;
+  Email: string;
+  Celular: string;
+  NombreCompleto: string;
+  CostoComision: number;
+  CodigoPago: string;
 }
 
 export interface tDetalleOrden {
-    IdOrden:         number;
-    IdProductoTalla: number;
-    Cantidad: number;
+  IdOrden: number;
+  IdProductoTalla: number;
+  Cantidad: number;
 }
 
 // Define las propiedades del modelo
@@ -130,4 +130,15 @@ export interface Tdeposito {
   Observaciones: string;
   CodigoPago: string | any;
   CostoComision: number;
+}
+
+export interface tMateriaDocente {
+  GestionAcademica: string;
+  CodigoModalidadcurso: string;
+  CodigoCarrera: string;
+  SiglaMateria: string;
+  NumeroPlanEstudios: string;
+  IdDocente: string;
+  CodigoTipoGrupoMateria: string;
+  Grupo: string;
 }

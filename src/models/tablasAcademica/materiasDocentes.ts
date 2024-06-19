@@ -2,12 +2,13 @@ import { DataTypes } from 'sequelize';
 import { db5 } from '../../database/conexion';
 
 const MateriasDocentes = db5.define('MateriasDocentes', {
-  CodigoModalidadCurso: { type: DataTypes.STRING(2) },
-  CodigoCarrera: { type: DataTypes.INTEGER },
-  NumeroPlanEstudios: { type: DataTypes.INTEGER },
-  SiglaMateria: { type: DataTypes.STRING(6) },
-  CodigoTipoGrupoMateria: { type: DataTypes.STRING(1) },
-  Grupo: { type: DataTypes.STRING(2) },
+  GestionAcademica: { type: DataTypes.STRING(6), primaryKey: true },
+  CodigoModalidadCurso: { type: DataTypes.STRING(2), primaryKey: true },
+  CodigoCarrera: { type: DataTypes.INTEGER, primaryKey: true },
+  NumeroPlanEstudios: { type: DataTypes.INTEGER, primaryKey: true },
+  SiglaMateria: { type: DataTypes.STRING(6), primaryKey: true },
+  CodigoTipoGrupoMateria: { type: DataTypes.STRING(1), primaryKey: true },
+  Grupo: { type: DataTypes.STRING(2), primaryKey: true },
   IdPersona: { type: DataTypes.STRING(15) },
   CodigoSEA: { type: DataTypes.STRING(1) },
   NumeroEstudiantesLimite: { type: DataTypes.INTEGER },
@@ -28,7 +29,7 @@ const MateriasDocentes = db5.define('MateriasDocentes', {
   DependenciaTeoria: { type: DataTypes.INTEGER },
   TipoLlenado: { type: DataTypes.INTEGER },
   CodigoUsuarioActualizacion: { type: DataTypes.STRING(3) },
-  FechaActualizacion: { type: DataTypes.DATE }  
+  FechaActualizacion: { type: DataTypes.DATE }
 }, {
   timestamps: false,
   tableName: 'MateriasDocentes'

@@ -76,10 +76,10 @@ const db4 = new Sequelize(pagosConfig.database, pagosConfig.user, pagosConfig.pa
 
 /** EDOCENTE */
 const academicaConfig = {
-  user: `${process.env.USER_DB4}`,
-  password: `${process.env.PASS_DB4}`,
-  server: `${process.env.HOST_DB4}`,
-  database: `${process.env.NAME_BD4}`
+  user: `${process.env.USER_DB5}`,
+  password: `${process.env.PASS_DB5}`,
+  server: `${process.env.HOST_DB5}`,
+  database: `${process.env.NAME_DB5}`
 }
 
 const db5 = new Sequelize(academicaConfig.database, academicaConfig.user, academicaConfig.password, {
