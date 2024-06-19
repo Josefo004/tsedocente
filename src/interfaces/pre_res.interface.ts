@@ -142,3 +142,49 @@ export interface tMateriaDocente {
   CodigoTipoGrupoMateria: string;
   Grupo: string;
 }
+
+export interface fMateriaDocente {
+  GestionAcademica: string;
+  CodigoModalidadcurso: string;
+  CodigoTipoGrupoMateria: string;
+  CodigoCarrera: string;
+  SiglaMateria: string;
+  CodigoSea: string;
+  NumeroParciales: number;
+  Grupos: string;
+  TipoLlenado: number | null;
+  EsMatricial: number;
+  Usuario: string;
+  FechaHora: string;
+}
+
+export interface TMateriaDocente {
+  GestionAcademica: string;
+  CodigoModalidadCurso: string;
+  CodigoCarrera: number;
+  NumeroPlanEstudios: number;
+  SiglaMateria: string;
+  CodigoTipoGrupoMateria: string;
+  Grupo: string;
+  IdPersona: string;
+  CodigoSEA: string;
+  NumeroEstudiantesLimite: number;
+  NumeroEstudiantesProgramados: number;
+  NumeroParciales: number;
+  FechaPrimerParcial: Date | null;
+  FechaSegundoParcial: Date | null;
+  FechaTercerParcial: Date | null;
+  FechaExamenFinal: Date | null;
+  FechaSegundaInstancia: Date | null;
+  FechaPracticasYLab: Date | null;
+  CodigoUsuario: string;
+  FechaHoraRegistro: Date;
+  NumeroPracticas: number;
+  NumeroLaboratorios: number;
+  TransferidoCargaHoraria: boolean;
+  CodigoSede: string | null;
+  DependenciaTeoria: number;
+  TipoLlenado: number | null;
+  CodigoUsuarioActualizacion: string | null;
+  FechaActualizacion: string | null;
+}
