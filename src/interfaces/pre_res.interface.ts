@@ -186,5 +186,5 @@ export interface TMateriaDocente {
   DependenciaTeoria: number;
   TipoLlenado: number | null;
   CodigoUsuarioActualizacion: string | null;
-  FechaActualizacion: string | null;
+  FechaActualizacion: Date | null;
 }
