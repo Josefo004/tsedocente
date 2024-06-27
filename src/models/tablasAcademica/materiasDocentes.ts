@@ -31,8 +31,8 @@ const MateriasDocentes = db5.define('MateriasDocentes', {
   CodigoUsuarioActualizacion: { type: DataTypes.STRING(3) },
   FechaActualizacion: { type: DataTypes.DATE }
 }, {
-  timestamps: false,
-  tableName: 'MateriasDocentes'
+  tableName: 'MateriasDocentes',
+  timestamps: false
 });
 
 export default MateriasDocentes;

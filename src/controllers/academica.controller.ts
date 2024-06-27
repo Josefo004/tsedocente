@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { fMateriaDocente, tMateriaDocente } from '../interfaces/pre_res.interface';
 import MateriasDocentes from '../models/tablasAcademica/materiasDocentes';
+import { literal } from 'sequelize';
 
 const actualizarMateriaDocente = async (mado: tMateriaDocente, fmad: fMateriaDocente) => {
   try {
@@ -20,9 +21,10 @@ const actualizarMateriaDocente = async (mado: tMateriaDocente, fmad: fMateriaDoc
       throw new Error('No encontrado');
     }
 
-    console.log(`Registro Recuperado ${JSON.stringify(registro, null, 2)}`);
+    // console.log(`Registro Recuperado ${JSON.stringify(registro, null, 2)}`);
 
-    // const feho = new Date(fmad.FechaHora);
+    const fechaHora = new Date(fmad.FechaHora);
+    fechaHora.setHours(fechaHora.getHours() - 4);
 
     const valores = {
       CodigoSEA: fmad.CodigoSea,
@@ -31,13 +33,13 @@ const actualizarMateriaDocente = async (mado: tMateriaDocente, fmad: fMateriaDoc
       NumeroPracticas: 1,
       NumeroLaboratorios: 1,
       CodigoUsuarioActualizacion: fmad.Usuario,
-      FechaActualizacion: new Date(fmad.FechaHora).toISOString()
+      FechaActualizacion: literal(`CAST('${fechaHora.toISOString()}' AS DATETIME)`)
     };
 
-    console.log(valores);
+    // console.log(valores);
 
     const actualizado = await registro.update(valores);
-    console.log(`updated record ${JSON.stringify(actualizado, null, 2)}`);
+    // console.log(`Registro Actualizado ${JSON.stringify(actualizado, null, 2)}`);
 
     return actualizado;
   } catch (error) {

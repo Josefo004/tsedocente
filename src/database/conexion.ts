@@ -90,6 +90,9 @@ const db5 = new Sequelize(academicaConfig.database, academicaConfig.user, academ
       encrypt: false,
       trustServerCertificate: false
     }
+  },
+  define: {
+    charset: 'utf8'
   }
 });
 export { db1, db2, db3, db4, db5 };
