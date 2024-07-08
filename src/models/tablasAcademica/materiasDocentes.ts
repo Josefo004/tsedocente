@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
-import { db5 } from '../../database/conexion';
+import { db6 } from '../../database/conexion';
 
-const MateriasDocentes = db5.define('MateriasDocentes', {
+const MateriasDocentes = db6.define('MateriasDocentes', {
   GestionAcademica: { type: DataTypes.STRING(6), primaryKey: true },
   CodigoModalidadCurso: { type: DataTypes.STRING(2), primaryKey: true },
   CodigoCarrera: { type: DataTypes.INTEGER, primaryKey: true },
@@ -31,7 +31,7 @@ const MateriasDocentes = db5.define('MateriasDocentes', {
   CodigoUsuarioActualizacion: { type: DataTypes.STRING(3) },
   FechaActualizacion: { type: DataTypes.DATE }
 }, {
-  tableName: 'MateriasDocentes',
+  tableName: 'Edoc_MateriasDocentes',
   timestamps: false
 });
 

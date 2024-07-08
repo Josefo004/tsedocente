@@ -74,7 +74,7 @@ const db4 = new Sequelize(pagosConfig.database, pagosConfig.user, pagosConfig.pa
   }
 });
 
-/** EDOCENTE */
+/** ACADEMICA */
 const academicaConfig = {
   user: `${process.env.USER_DB5}`,
   password: `${process.env.PASS_DB5}`,
@@ -95,4 +95,28 @@ const db5 = new Sequelize(academicaConfig.database, academicaConfig.user, academ
     charset: 'utf8'
   }
 });
-export { db1, db2, db3, db4, db5 };
+
+/** EDOCENTE2021 */
+
+const eDodencete2021Config = {
+  user: `${process.env.USER_DB6}`,
+  password: `${process.env.PASS_DB6}`,
+  server: `${process.env.HOST_DB6}`,
+  database: `${process.env.NAME_DB6}`
+}
+
+const db6 = new Sequelize(eDodencete2021Config.database, eDodencete2021Config.user, eDodencete2021Config.password, {
+  host: eDodencete2021Config.server,
+  dialect: 'mssql',
+  dialectOptions: {
+    options: {
+      encrypt: false,
+      trustServerCertificate: false
+    }
+  },
+  define: {
+    charset: 'utf8'
+  }
+});
+
+export { db1, db2, db3, db4, db5, db6 };

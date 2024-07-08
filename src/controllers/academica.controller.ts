@@ -24,7 +24,7 @@ const actualizarMateriaDocente = async (mado: tMateriaDocente, fmad: fMateriaDoc
     console.log(`Registro Recuperado ${JSON.stringify(registro, null, 2)}`);
 
     const fechaHora = new Date(fmad.FechaHora);
-    fechaHora.setHours(fechaHora.getHours() - 4);
+    // fechaHora.setHours(fechaHora.getHours() - 4);
 
     const valores = {
       CodigoSEA: fmad.CodigoSea,
